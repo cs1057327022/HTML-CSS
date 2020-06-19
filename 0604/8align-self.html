@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: flex;
+            height: 300px;
+            width: 500px;
+            background-color: sandybrown;
+            align-items: center;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .one {
+            background-color: brown;
+            align-self: flex-start;
+        }
+
+        .two {
+            background-color: chartreuse;
+        }
+
+        .three {
+            background-color: cornflowerblue;
+            /* 作用：设置单个子元素；在交叉轴上对齐方式；其他元素继承 align-item */
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+    </div>
+</body>
+
+</html>

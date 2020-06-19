@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 
+            函数执行顺序与元素最总效果有关系
+            例如：向选择后平移 与 选评论后旋转 效果差别
+             */
+            transform:rotate(45deg);
+            /* transform:translateX(120px)  rotate(90deg); */
+            /* 
+            设置元素 基点的位置坐标轴原点 默认在元素中心
+            left 基点在左
+            right 基点在右
+            */
+            /* transform-origin: center; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        每个元素本身；具有坐标轴
+        2d x y
+        3d x y z
+        元素选择后轴也会旋转
+     -->
+     <div class="box"></div>
+</body>
+</html>

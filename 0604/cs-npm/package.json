@@ -1,0 +1,16 @@
+{
+  "name": "chentest12332",
+  "version": "0.1.1",
+  "description": "11111",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "chenshun":"node index.js"
+    
+  },
+  "keywords": [
+    "chen"
+  ],
+  "author": "chenshun",
+  "license": "ISC"
+}

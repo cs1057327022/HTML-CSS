@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000000;
+            overflow: auto;
+            padding: 10px;
+            /* float: left; */
+            margin: 10px;
+            display: inline-block;
+        }
+        /* 隐藏滚动条 */
+        .box::-webkit-scrollbar{
+            display: none;
+        }
+        .wrap{
+            width: 30%;
+            height: 130px;
+            background-color: royalblue;
+            overflow: auto;
+            /* 注意：对文本类 inline 元素有用的大部分对inline-block 都有效果 */
+            white-space: nowrap;
+        }
+        .clearfix{
+            zoom: 1;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+        }
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>我是内容01</p>
+        <p>我是内容02</p>
+        <p>我是内容03</p>
+        <p>我是内容04</p>
+        <p>我是内容05</p>
+        <p>我是内容06</p>
+        <p>我是内容07</p>
+        <p>我是内容08</p>
+        <p>我是内容09</p>
+        <p>我是内容10</p>
+    </div>
+    <div class="clear"></div>
+    <!-- 
+        横向滚动方式一：
+        父元素定宽 white-space: nowrap 子元素定宽 overflow: auto
+    -->
+    <div class="wrap clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <!-- 
+        横向滚动方式二： 
+            子元素定了父元素宽度auto overflow: auto
+    -->
+
+    <div class="content">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

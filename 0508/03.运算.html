@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>运算</title>
+</head>
+<body>
+        
+</body>
+</html>
+<script>
+    // js的数据类型:string number boolean Object Array undefined null;
+
+    // string字符串
+    var name = 'xiaoming';// 使用单引号和双引号都可以，推荐使用单引号
+    var course = 'hello';
+    console.log(course + name);
+    // 字符串与字符串相加是使两个字符串相连(也就是说拼接到一起去)
+    var age = 3;
+    console.log(name + age);
+    // 字符串与数字相加，会导致数字转化成字符串，然后相连
+
+    var result = '1' + 1/2;
+    console.log(result);//10.5
+    // 分析
+    // '1' + 0.5
+    // '1' + '0.5'
+    // '10.5'
+
+
+    var isMale = false;
+    console.log(isMale + name);//falsexiaoming
+    // 布尔值与字符串相加时，会先把布尔值转换成字符串，在相连
+
+    console.log(false + '2')//false2
+    console.log(true + 2)//3
+    // 布尔值与数字相加时，会先把布尔值转换成数字，在相加
+    // false ---> 0
+    // true  ---> 1
+    
+    // 对字符串好和数字使用减号运算符
+    var m = '1' - 1/2;
+    console.log(m);//0.5
+    // 分析
+    // '1' - 0.5
+    // 1 - 0.5
+    // 0.5
+
+    // js会尽最大努力计算出一个结果，在计算过程中会【自动】根据运算符的类型进行类型转换(隐式转换)
+    // 字符串支持 +运算符 但字符串不支持 -运算符
+
+
+    // 逻辑运算符
+    var f1 = true;
+    var f2 = true;
+    // alert(f1 && f2);//true
+    // alert(f1 || f2);//true
+    // &&,|| 逻辑运算符 与，或
+
+    // && 两边的条件都成立时，结果返回true
+    // 如果有一个条件为false 直接返回false
+    // 如果第一个条件为false，剩下的条件不会在判断，直接返回false
+    // alert(5>6 && 10>8);//false
+
+    // || 两边的条件,只要有一个成立,结果返回true
+    //  当2个都为false时，才会返回false
+    //  如果第一个条件为true，剩下的条件不会在判断，直接返回true
+    // alert(5>6 || 10<8);//false
+
+    // 对数字使用逻辑运算符
+    var b = 2;
+    var c = 3;
+    // alert(b && c);//3 输出后面的数字
+    // alert(b || c);//2 输出前面的数字
+
+    // 对字符串使用逻辑运算符
+    var name = 'xiaoming';
+    var age = 3;
+    // alert( name && age);//3  输出后面的条件
+    // alert( name || age);//'xiaoming' 输出前面的条件
+    
+    // & , |
+    var m = 6,n = 3;
+    alert(m & n);//2
+    alert(m | n);//7
+
+    // 个位数进行比较
+    // 6   0110
+    // 3   0011
+    // &   0010 两个数对应的位数都为1  才返回1否则取0  
+    // |   0111 两个数对应的位数只要有一个为1  就返回1否则取0
+
+
+
+
+
+
+</script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常用的标签及css样式</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+    ul,ol{
+        list-style: none;
+    }
+    .box{
+        /* 宽 */
+        width: 200px;
+        /* 高 */
+        height: 200px;
+        /* 字体大小 */
+        font-size: 50px;
+        /* 字体颜色 */
+        color: cornflowerblue;
+        /* 背景颜色 */
+        background-color: #777;
+        /* 文字对齐方式center居中，left左对齐，right右对齐 */
+        text-align: center;
+
+        /* 行高，当文字只有一行时行高设置和容器高一致，文字会在容器上下居中 */
+        line-height: 200px;
+
+        /* 边框 参数：边框线的粗细  线型单实线  颜色 */
+        border: 1px solid red;
+        /* 圆角 */
+        border-radius: 20px;
+        /* 外边距 */
+        margin: 100px;
+        /* 内边距 */
+        padding: 50px;
+    }
+
+</style>
+<body>
+    <!-- h1~h6是页面正文标题标签，文字都是加粗的，其中h1~h6文字越来越小 -->
+    <h1>我是h1标签</h1>
+    <h2>我是h2标签</h2>
+    <h3>我是h3标签</h3>
+    <h4>我是h4标签</h4>
+    <h5>我是h5标签</h5>
+    <h6>我是h6标签</h6>
+    <!-- br标签，换行标签 -->
+    <br>
+    <!-- hr标签，分割线 -->
+    <hr>
+    <p>我是p标签，段落标签，用来显示一个段落</p>
+    <div>我是div标签 ，块标签，用来划分区域</div>
+
+    <nav>我是nav标签，我是语义化标签，用来显示导航栏</nav>
+    <header>我是header标签，我是语义化标签，用来显示页面头部</header>
+    <section>我是section标签，我是语义化标签，用来显示一部分一段内容</section>
+    <main>我是main标签，我是语义化标签，用来显示页面的主体</main>
+    <footer>我是footer标签，我是语义化标签，用来显示页面的底部</footer>
+
+    <!-- a标签，超链接标签，用来显示页面中的一个超链接，点击跳转到另外一个页面，href属性用于设置跳转路径,target属性用于设置页面跳转的打开方式，默认是在当前页面打开，_blank是在新页面打开 -->
+    <a href="https://www.baidu.com" target="_blank">baidu</a>
+
+    <!-- img标签，用于显示一张图片，其中src属性表示要显示的图片的路径，alt属性是图片无法正常显示时加载的文字 -->
+    <img src="images/956dac3abaebda76339341ae5c273961.jpg" alt="图片加载失败">
+
+    <!-- 无序列表 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <!-- 有序列表 -->
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <div class="box">hi!</div>
+</body>
+</html>

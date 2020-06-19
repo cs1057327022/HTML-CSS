@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- user0scalable=no 禁止用户手指头放大或者缩小 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            /* html 的font-size设置为整数 因为好计算 50px 100px */
+            font-size: 50px;
+        }
+        /* 让图片与文字基线对齐 */
+        img{
+            vertical-align: middle;
+        }
+        /* 
+        设置默认字体 字体大小 颜色
+        不能设置小于12px 以下的 因为谷歌浏览器最小为12px
+         */
+        .warper{
+            padding-bottom: 1rem;
+        }
+        .fullImg>a{
+            display: block;
+            display: flex;
+        }
+        .fullImg img{
+            width: 100%;
+        }
+        .fullImg{
+            position: relative;
+        }
+        .close{
+            position: absolute;
+            right: 0;
+            top: 0;
+            top: 50%;
+            transform: translateY(-76%);
+        }
+        .fullImg .close a{
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            text-align: center;
+        }
+        .fullImg .close img{
+            width: 30%;
+        }
+        .banner>a{
+            display: block;
+        }
+        .banner img{
+            width: 100%;
+        }
+        .list ul{
+            padding:.1rem .15rem;
+            list-style: none;
+        }
+        .list ul li{
+            display: flex;
+            font-size: .2rem;
+            padding: .3rem 0rem;
+        }
+        li .item img{
+            width: 2.45rem;
+            height: 1.45rm;
+        }
+        .name{
+            font-size: .32rem;
+        }
+        .decription{
+            font-size: .26rem;
+            color: #cccccc;
+        }
+        .price{
+            font-size: .28rem;
+            color: tomato;
+        }
+        .tabBar{
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: #ffffff;
+            padding: 0.2rem 0rem;
+        }
+        .tabBar ul{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            font-size: .2rem;
+            padding: .3rem 0rem;
+            border-top: 1px solid #cccccc;;
+        }
+        .icon{
+            width: 0.4rem;
+            height: 0.4rem;
+            background: url(http://s1.mi.com/m/images/m/spr1.png);
+            background-position-y:-2.4rem;
+            background-size: 0.4rem 3.2rem;
+            overflow: hidden;
+            margin: 0 auto 0.08rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="warper">
+        <div class="fullImg">
+            <a href="#">
+                <img src="http://s1.mi.com/m/images/20151027/ios.png" alt="">
+            </a>
+            <div class="close">
+                <a href="#">
+                    <img src="http://s1.mi.com/m/images/20151028/top-x.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="banner">
+            <a href="#">
+                <img src="http://i8.mifile.cn/v1/a1/T17fh_BvVv1RXrhCrK!720x360.jpg" alt="">
+            </a>
+        </div>
+        <div class="list">
+            <ul>
+                <li>
+                    <div class="item"><img src="http://i8.mifile.cn/v1/a1/T14xJTByZ_1RXrhCrK.jpg" alt=""></div>
+                    <div class="item-decription">
+                        <div class="name">小米手机5</div>
+                        <div class="decription">【每天10点开售】骁龙820处理器 / 4GB 内存 / 128GB 闪存 / 4轴防抖相机 / 3D陶瓷机身</div>
+                        <div class="price">1999元 起</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item"><img src="http://i8.mifile.cn/v1/a1/T14xJTByZ_1RXrhCrK.jpg" alt=""></div>
+                    <div class="item-decription">
+                        <div class="name">小米手机5</div>
+                        <div class="decription">【每天10点开售】骁龙820处理器 / 4GB 内存 / 128GB 闪存 / 4轴防抖相机 / 3D陶瓷机身</div>
+                        <div class="price">1999元 起</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item"><img src="http://i8.mifile.cn/v1/a1/T14xJTByZ_1RXrhCrK.jpg" alt=""></div>
+                    <div class="item-decription">
+                        <div class="name">小米手机5</div>
+                        <div class="decription">【每天10点开售】骁龙820处理器 / 4GB 内存 / 128GB 闪存 / 4轴防抖相机 / 3D陶瓷机身</div>
+                        <div class="price">1999元 起</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item"><img src="http://i8.mifile.cn/v1/a1/T14xJTByZ_1RXrhCrK.jpg" alt=""></div>
+                    <div class="item-decription">
+                        <div class="name">小米手机5</div>
+                        <div class="decription">【每天10点开售】骁龙820处理器 / 4GB 内存 / 128GB 闪存 / 4轴防抖相机 / 3D陶瓷机身</div>
+                        <div class="price">1999元 起</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item"><img src="http://i8.mifile.cn/v1/a1/T14xJTByZ_1RXrhCrK.jpg" alt=""></div>
+                    <div class="item-decription">
+                        <div class="name">小米手机5</div>
+                        <div class="decription">【每天10点开售】骁龙820处理器 / 4GB 内存 / 128GB 闪存 / 4轴防抖相机 / 3D陶瓷机身</div>
+                        <div class="price">1999元 起</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <footer class="tabBar">
+            <ul>
+                <li class="tabBar-item">
+                    <div class="icon"></div>
+                    <div class="title">首页</div>
+                </li>
+                <li class="tabBar-item">
+                    <div class="icon"></div>
+                    <div class="title">首页</div>
+                </li>
+                <li class="tabBar-item">
+                    <div class="icon"></div>
+                    <div class="title">首页</div>
+                </li>
+                <li class="tabBar-item">
+                    <div class="icon"></div>
+                    <div class="title">首页</div>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
+<script>
+    // 做移动端适配 配合 rem的方式
+    /*
+    找到最大尺寸720px
+    当大于720px宽度 html的font-size设置为100px 几乎兼容所有的大显示器
+    考虑问题 屏幕缩小时：尺寸的问题：让html的font-size是一个动态的值：并且与视图窗口小有关。这样就是实现了 所有元素响应式
+    */
+    // rem 适配的 js 代码
+    (function (window, document) {
+        // 因为 ui 设计稿 标准的1倍图 以375px 为标准 2倍图为750px 为标准
+        // 为了找到规律尽可能小的误差:所以写viewwidth=750
+      var viewWidth = 750;
+      var pick = viewWidth / 100;
+      var mode = "resize";
+      function change() {
+        var view = document.documentElement.clientWidth || window.innerWidth;
+        // 如果窗口视图宽度大于720px
+        if (view >= 750) {
+            // 那么设置html的font-size为100ox
+          document.getElementsByTagName("html")[0].style.fontSize = 100 + "px";
+          return;
+        }
+        // 否则设置html的font-size为动态的值 = 视图窗口宽度 / 100px
+        document.getElementsByTagName("html")[0].style.fontSize =
+          view / pick + "px";
+      }
+      window.addEventListener(mode, change, !1);
+      window.document.addEventListener("DOMContentLoaded", change, !1);
+    })(window, document);
+</script>
+<!--在使用rem方案的时候，设计师设计尽量最大的页面效果图，例如720像素的基本可以适应所有的移动端的设备-->
+    <!--整体布局默认是不设置宽度的，就直接让它100%，铺满整个屏幕就OK了-->
+    <!--小布局都是rem为单位的，大于720像素的时候，没有变化，但是一旦小于720像素的时候，等比例的缩放，这点跟移动端不考虑放大，考虑缩小的原则是一致的-->
+    <!--图片只设置width:100%,其余不用设置，自适应盒子的大小-->
+    <!--文字依然以rem为单位，等比例的放大，缩小-->
+    <!--所有的布局均使用flex布局来用,不再使用width百分比，float布局了-->
+
+
+
+<!-- 
+    一套代码一个布局适应所有移动端
+    1：设计时，以【最大】像素为基础 720px ，那么使用的移动端都适配
+    2：整体布局默认不设置宽度：默认100%
+    3：父元素一般不设置高度，由子元素撑起来
+    4：图片设置100%
+    5：布局用flex 布局不用width:100% float
+    6：文件大小rem
+ -->

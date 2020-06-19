@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav{
+            width: 100%;
+            padding: 20px 0;
+            background-color: #000000;
+        }
+        ul{
+            display: flex;
+        }
+        li{
+            margin-left: 10px;
+        }
+        div{
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            display: none;
+        }
+        @media screen and (max-width: 768px){
+            div{
+                display: block;
+            }
+            ul{
+                flex-flow: column;
+            }
+            li{
+                display: none;
+            }
+            ul:hover>li{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <div></div>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">详情</a></li>
+            <li><a href="#">我的</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

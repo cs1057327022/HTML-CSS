@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
+    <!-- 
+        所有的ui 组件库
+        1  导入资源文件 css js 文件
+        2  看着官方 知道每个类名是干什么的：每个属性的作用是什么，值有那些
+        3  用啥找啥
+
+        当ui 组件的样式不能完全满足需求时候时
+        1：没有样式===>自己写
+        2：有样式，只能满足一部分需要修改
+            2.1  找到内部到底是哪一个类名的样式
+            2.2  自己写一个选择器用权重 覆盖样式
+            2.3  不到万不得已 不要修改源码
+        
+     -->
+     <style>
+         .wraper{
+             width: 80%;
+             background-color: red;
+         }
+         .box{
+             /* width: 200px; */
+             height: 150px;
+             background-color: red;
+             padding:5px 10px;
+         }
+         .child{
+             height: 100%;
+             background-color: yellow;
+         }
+     </style>
+</head>
+<body>
+    <!-- 
+        栅格系统
+        1：默认将每一个容器等分为12份
+        2：.clo-xx 区分显示器
+        3：.clo-xx-3 设置 子元素 在12份中占据几份
+        总结：.col-xx-ss 表示 在某个显示器 子元素占据12份中的ss份
+        作用：给予元素设置宽度
+
+        怎么用
+        1：确定在什么端实现什么布局：pc端 ====>col-md  col-sm ..
+        2：确定一行排几个（n） 2，4，6，1
+        3：设置子元素宽度 12/n  注意拉开子元素间距离不能用margin 用padding ===>col-md-12/n
+        4：n 为特殊值 不能被12整除，不要用栅格系统 
+     -->
+    <div class="container wraper">
+        <div class="box col-md-3 col-xs-12">
+            <div class="child">
+                <!-- text-align -->
+                <p class="text-left">我是一个内容</p>
+                <p class="text-right">我是一个内容</p>
+                <p class="text-center">我是一个内容</p>
+            </div>
+        </div>
+        <div class="box col-md-3 col-xs-12">
+            <div class="child">
+                <!-- text-tranform:lowercate/uppercase/capitalize 小写/大写/首字母大写 -->
+                <p class="text-lowercase">Lowercased text.</p>
+                <p class="text-uppercase">Uppercased text.</p>
+                <p class="text-capitalize">Capitalized text.</p>
+            </div>
+        </div>
+        <div class="box col-md-3 col-xs-12">
+            <div class="child">
+                <ul class="list-unstyled">
+                    <li>列表01</li>
+                    <li>列表02</li>
+                    <li>列表03</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box col-md-3 col-xs-12">
+            <div class="child"></div>
+        </div>
+        <div class="box col-md-3 col-xs-12">
+            <div class="child"></div>
+        </div>
+        <div class="box col-md-3 col-xs-12">
+            <div class="child"></div>
+        </div>
+        <div class="box col-md-3 col-xs-12">
+            <div class="child"></div>
+        </div>
+        <div class="box col-md-3 col-xs-12">
+            <div class="child"></div>
+        </div>
+        <div class="box col-md-3 col-xs-12">
+            <div class="child"></div>
+        </div>
+        <div class="box col-md-3 col-xs-12">
+            <div class="child"></div>
+        </div>
+        <!-- <div class="box col-md-3  col-xs-12"></div>
+        <div class="box col-md-3  col-xs-12"></div>
+        <div class="box col-md-3  col-xs-12"></div>
+        <div class="box col-md-3  col-xs-12"></div>
+        <div class="box col-md-3  col-xs-12"></div>
+        <div class="box col-md-3  col-xs-12"></div>
+        <div class="box col-md-3  col-xs-12"></div>
+        <div class="box col-md-3  col-xs-12"></div> -->
+    </div>
+</body>
+</html>

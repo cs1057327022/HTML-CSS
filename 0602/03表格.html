@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+        tr,th,td{
+            border: 1px solid black;
+        }
+        tr{
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+        }
+        td{
+            /* 解决 表格响应式的样式Bug */
+            max-width: 50px;
+            min-width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>成绩</th>
+                <th>性别</th>
+                <th>是否离职</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>内容01</td>
+                <td>内容01</td>
+                <td>内容01</td>
+                <td>内容01</td>
+                <td>内容01</td>
+            </tr>
+            <tr>
+                <td>内容01</td>
+                <td>内容01</td>
+                <td>内容01</td>
+                <td>内容01</td>
+                <td>内容01</td>
+            </tr>
+            <tr>
+                <td>内容01</td>
+                <td>内容01</td>
+                <td>内容01</td>
+                <td>内容01</td>
+                <td>内容01</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: flex;
+            height: 300px;
+            width: 500px;
+            background-color: sandybrown;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            /* 
+            flex-shrink
+            作用：设置子元素缩放
+            默认值 1 缩放
+            值：0 不缩放
+             */
+        }
+
+        .one {
+            background-color: brown;
+            order: 2;
+            flex-shrink: 1;
+        }
+
+        .two {
+            background-color: chartreuse;
+            order: 0;
+            flex-shrink: 0;
+        }
+
+        .three {
+            background-color: cornflowerblue;
+            order: 1;
+            flex-shrink: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+    </div>
+</body>
+
+</html>

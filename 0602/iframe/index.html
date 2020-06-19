@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        nav{
+            width: 20%;
+            height: 100%;
+            background-color: #000000;
+            float: left;
+        }
+        ul li{
+            text-align: center;
+        }
+        a{
+            display: inline-block;
+            padding: 10px 5px;
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+        }
+        a:hover{
+            background-color: #cccccc;
+        }
+        .container{
+            width: 80%;
+            height: 100%;
+            background-color: tomato;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <!-- target 找到窗口名字 name=content 并加载href链接的页面 -->
+            <li><a href="a.html" target="content">链接A页面</a></li>
+            <li><a href="b.html" target="content">链接B页面</a></li>
+            <li><a href="c.html" target="content">链接C页面</a></li>
+        </ul>
+    </nav>
+    <!-- 待切换内容 -->
+    <!-- 
+        iframe 是h5 标签 表示在浏览器窗口中植入 另一个【窗口】
+        注意是：是查看 不是页面
+        name；窗口的名字
+        src指的是窗口默认渲染的链接地址是什么
+     -->
+    <div class="container">
+        <iframe src="a.html" name="content" frameborder="0"></iframe>
+    </div>
+    
+</body>
+</html>

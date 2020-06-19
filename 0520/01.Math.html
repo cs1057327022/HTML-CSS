@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math</title>
+</head>
+<body>
+   
+</body>
+</html> 
+<script>
+        console.log(Math.random())//Math.random()随机数，返回0~1之间的随机数(包含0 不包含1)
+        console.log(Math.ceil(3.281))//4 向上取整(小数位数进一位)，不存在四舍五入
+        console.log(Math.floor(3.281))//3 向下取整(去除小数)，不存在四舍五入
+        console.log(Math.round(3.281))//3 四舍五入取整
+        console.log(Math.round(3.681))//4
+
+        console.log(Math.pow(4,3))//64 Math.pow(x,y)幂次方即x的y次方
+
+        console.log(Math.sqrt(9))//2 平方根
+
+        console.log(Math.abs(-9))//9 绝对值
+
+        //Math.PI当成弧度值，相当于180度对应的弧度
+        //Math.PI*2相当于360度对应的弧度
+        //Math.PI/6相当于30度对应的弧度
+
+        console.log(Math.min(5,2))//2 取最小值
+        console.log(Math.max(5,2))//5 取最大值
+
+        console.log(Math.cos(3))//返回角的余弦
+        console.log(Math.sin())//返回角的正弦
+        console.log(Math.tan())//返回角的正切
+
+
+        // 创建一个元素节点
+        var div = document.createElement('div')
+        div.style.width = '300px';
+        div.style.height = '300px';
+        div.style.backgroundColor = 'red'
+        // 添加到父元素上
+        document.body.appendChild(div)
+
+
+
+        // 请写出获得15-23（包含15和23）之间的随机 整数 的代码
+        var num = Math. floor(Math.random()*9) + 15
+        console.log(num)
+   
+
+
+    </script>

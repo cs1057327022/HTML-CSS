@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs-animate.css">
+    <style>
+        h1{
+            width: 300px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            background-color: coral;
+            color: #f1f1f1;
+            /* animation: down 1s infinite; */
+        }
+        @keyframes bian{
+            0%{
+             background-color: cornflowerblue;
+            }100%{  
+              background-color: crimson;
+            }
+        }
+        @keyframes yin {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        .animate{
+            /* 指定执行所有的动画 */
+            animation-name: all;
+            animation-duration: 1s;
+            animation-direction: normal;
+            /* 
+            动画执行的速度；匀速 变速
+                快慢快
+                慢快慢
+
+                cubic-bezier  是速度曲线函数
+                cubic-bezier(x1,y1,x2,y2)
+
+                1:看运动曲线 可以退出速度是怎么变化的
+                 以45度的匀速执行速度为标准，角度大于45度 快 小于45度慢
+                2 大概的在 cubi函数的两个左标种随便画个线
+            */
+            /* animation-timing-function: linear; */
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            /* animation-iteration-count:infinite; */
+        }
+        .animate-bian{
+            animation-name: bian;
+        }
+        .animate-yin{
+            animation-name: yin;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <!-- 记录测试动画库是否成功 -->
+    <!-- 
+        封装动画库的思路
+        1：定义基础类  animate
+        2：分别定义各种动画 animate-flash animate-bounch
+     -->
+     <h1 class="animate animate-bian">Animate</h1>
+     <h1 class="animate animate-yin">Animate</h1>
+     
+</body>
+</html>
+<!-- 
+    提出公共的样式 ===================基础类
+    利用样式覆盖 修改 具体的样式 ======详细类名
+
+    属性值优先级
+    animation：all/其他 all 优先级最低
+    transtion：all/其他 all 优先级最低
+    
+    只要属性值为all的 all优先级就是最低的
+ -->

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 题目一
+    // 对于一个数字num
+    // 从2开始依次进行整除运算
+    // 当某一次余数为0时，说明这个数不是素数
+    // 一直运算到num-1，如果始终没有发现整除，说明是素数
+    
+    // for循环遍历每一个数字
+    for(var num = 101;num<201;num++){
+        // 从2开始依次进行整除运算
+        for(var i = 2;i<num;i++){
+            // 条件判断
+            if( num%i == 0){
+                break;//打断，跳出循环
+            }
+        }
+        // 如果上面的for循环正常结束，没有遇到break，说明是素数
+        // i == num时不满足上面for循环的条件，循环结束。此时i==num。
+        if(i == num){
+            console,console.log(num);
+        }
+    }
+
+
+    // 题目二
+    // 得到2个数值中较小的数字min
+    // 找min的约数i，从大往小找
+    // 判断i是不是另一个数字的约数
+    var m=6;
+    var n=27;
+    var min;
+    var max;
+    // 判断m是否大于n，如果m>n那么min=n;
+    min = m>n? n:m;
+    console.log(min)
+    // 判断m是否大于n，如果m>n那么max=m;
+    max = m>n? m:n;
+    console.log(max)
+
+    // 找min的约数i，从大往小找
+    for(var i=min;i>0;i--){
+        if(min%i == 0){
+            // 找到min的约数(从大往小找的)
+            if(max%i==0){
+                console.log(`${m},${n}的最大公约数为${i}`);
+                break;
+            }
+        }
+    }
+
+    // 求的m,n的最小公倍数
+    // 得到2个数值中较大的数字max，较小的数值min，并且找到他们的积j
+    // j在除以他们的最大公约数就可以得出他们的最小公倍数k。
+    var j =min*max;
+    var k = j/i
+    console.log(`${m},${n}的最小公倍数为${k}`);
+
+
+
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布尔对象</title>
+</head>
+<body>
+    <script>
+        var a = 1,b = 2;
+        console.log((a+b))//3
+        console.log(!!(a+b))//true
+        // !取反(凡是不是布尔值一次取反一律得到false)
+        console.log(!!true)//true
+        console.log(!('cc'))//false
+
+        var p = {};
+        var p1 = new Object();
+        console.log(p)//{}
+        console.log(p1)//{}
+        console.log(!p)//false
+        console.log(!p1)//false
+        var c = new Boolean('false')//字符串不为空都返回true，为空时返回false。
+        // 数字为0时返回false，其他都返回true
+        console.log(c)//Boolean {true}
+        // c是一个包含boolean的对象，而不是一个值
+        // c是包含true值的对象
+
+        console.log(new Boolean(true));//true
+        console.log(new Boolean('false'));//true
+        console.log(new Boolean(false));//false
+        console.log(new Boolean(0));//false
+        console.log(new Boolean(2));//true
+        console.log(new Boolean(null));//false
+        console.log(new Boolean(''));//false
+        console.log(new Boolean(undefined));//false
+        console.log(new Boolean(-0));//false
+        console.log(new Boolean(1));//true
+        console.log(new Boolean(NaN));//false
+        console.log(new Boolean(Object));//true
+        // 0 -0 '' null undefined NaN都会被认为false
+
+        // true表示数字1，false表示0
+
+        if(new Boolean('')){
+            console.log('dddd')//dddd
+        }
+        // 不管这个布尔对象，这个盒子装的时false还是true
+        // 一个布尔对象都会被认为是true，因为布尔对象就是一个对象
+
+        var b = new Boolean('false');//传入字符串，返回的是布尔对象
+        var b1 = Boolean(null);//返回的是布尔值
+        console.log(b)//Boolean {true}
+        console.log(b1)//false
+        // 直接调用布尔函数(而不是使用new，调用Boolean()函数)返回的是布尔值
+        
+
+        // 布尔对象和布尔值是不同的
+        // 使用布尔场景，如if()永远不要使用布尔对象
+
+        var str = true.toString()
+        console.log(str)//true
+
+        // var str1 = true.toSource()
+        // console.log(str1)//不兼容谷歌浏览器
+
+        console.log(true.valueOf())//true
+
+        var d = new Boolean('false')
+        console.log(d.valueOf())//true
+   
+    </script>
+</body>
+</html>

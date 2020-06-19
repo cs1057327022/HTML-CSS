@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: flex;
+            height: 300px;
+            width: 500px;
+            background-color: sandybrown;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            flex-grow: 1;
+        }
+
+        .one {
+            background-color: brown;
+        }
+
+        .two {
+            background-color: chartreuse;
+            flex-basis: 300px;
+        }
+
+        .three {
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+    </div>
+</body>
+
+</html>

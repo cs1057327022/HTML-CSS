@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // function 函数名(参数1,参数2,参数3,参数列表){函数体}
+    // 函数名的命名和变量名的命名相同(小驼峰)首单词小写，其余每个单词首字母大写
+
+    // 函数：封装一块完成一个特定功能的代码，通过调用来实现
+
+    // 如果某一段代码在不同的地方需要重复多次使用，那么就把这段代码写在一个函数体内，在需要执行这个代码的地方调用这个函数就可以了。这样做做可以提升页面的整洁度，减少代码量。
+    function printSepeator(){
+        console.log('****************');
+        console.log('我是一条华丽的分割线');
+        console.log('****************');
+    }
+    // 声明一个函数后，函数体中的代码并不执行，函数体中的代码在调用函数时执行
+    
+    // 调用函数
+    printSepeator();
+    
+    // 一个函数可以带有参数
+    // 计算2个数字之和并且返回这个值
+    function add(a,b){
+        document.write(a + b)
+    }
+    add(5,19)
+
+    // 函数可以有返回值
+    // 计算2个数之积并返回这个积
+    function times(b,d){
+        var result = b*d;
+        // return 用于返回一个值(函数的返回值)
+        // return语句会直接结束函数(return用于返回一个值，并且直接退出函数，返回的值可以为空)
+        return result;
+    }
+    var p = times(7,14);
+    console.log(p)
+    // console.log(times(7,14))
+
+
+    function f1(){
+        console.log('f1')
+        f3();
+        return;
+    }
+
+    function f2(){
+        console.log('f2')
+        f1();
+        // return;
+    }
+    f2();//f2 f1 f3
+
+    function f3(){
+        console.log('f3');
+    }
+
+    
+</script>

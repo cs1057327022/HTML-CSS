@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            font-size: 16px;
+        }
+        body{
+            font-size: 20px;
+        }
+        .box{
+            width: 100vw;
+            height: 200vh;
+            background-color: cornflowerblue;
+        }
+        h1{
+            font-size: 1rem;
+        }
+        p{
+            font-size: 1em;
+        }
+        .txt{
+            /* 小程序平台的 单位 */
+            /* width: 100rpx; */
+            /* height: 100rpx; */
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        %       元素宽度 = 30% * 父元素的content-width
+        vw      100vw = 视图窗口宽度
+        vh      100vh = 视图窗口高度
+        rem     1rem = html的font-size 大小 默认 1rem = 16px
+        em      1em = 最近的祖籍元素的font-size的大小
+
+        在布局时候：尽量不要给元素设置高度，有固定高度的必须设置 高度有子元素撑起来
+
+        滚动条：
+        页面的高度 > 视图窗口的高度
+        页面的高度 = 视图窗口的高度 + 滚动条滚动的高度
+     -->
+     <h1>Hellow word</h1>
+     <p>我是内容</p>
+    <div class="box"></div>
+    <div class="txt">我是内容</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>控制对象</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var p = {
+        // name : "aa",
+        age:3,
+        height:180,
+    }
+    //  Object.freeze(对象名)：冻结一个对象，被冻结的对象不能被删除，修改，添加新的属性，被冻结后的值无法改变。
+    // Object.freeze(p);
+    // delete p.age
+    // p.age = 4
+    console.log(p)
+
+    // Object.isFrozen(对象名):判断对象是否被冻结，冻结了返回true，未冻结返回false。
+    console.log(Object.isFrozen(p));//true
+
+
+    // Object.seal(对象名):密封对象,不能被删除，不能添加新的属性，但是可以改变属性值。
+    //  
+    // Object.seal(p)
+    // delete p.height
+    // p.age = 10
+    // p.isMale = true
+    console.log(p)
+    // Object.isSealed(对象名)：判断是否被密封，是返回true，否返回false。
+    console.log(Object.isSealed(p));//true
+
+
+
+    // Object.preventExtensions(对象名):让对象变得不可扩展，只能阻止添加属性和方法，不能阻止修改属性和方法，不能阻止删除。
+    Object.preventExtensions(p);
+    // delete p.age
+    // p.weight = 160//不可添加
+    // p.height = 200
+    console.log(p)
+    // Object.isExtensible(对象名):判断对象是否可扩展(是否可以添加属性和方法)，是返回ture，否返回false
+    console.log(Object.isExtensible(p));//false
+
+
+    // freez > seal > preventExtensions
+    // freez冻结后：对象不可变
+    // seal密封后：只能修改值
+    // preventExtensions不可扩展后：只能阻止添加属性和方法
+
+    
+    // Object.getOwnPropertyNames(对象名):获取对象中所有属性的名称，返回数组。
+    console.log(Object.getOwnPropertyNames(p));//["age","height"]
+    // console.log(Object.keys(p))//["age","height"]
+    console.log(Object.keys(p)[1]);//height
+    
+    // 判读数组是否拥有指定的属性
+    console.log(p.hasOwnProperty('age'));//true
+    
+
+
+    //toString():把一个逻辑值转换成字符串 ，并返回结果
+    console.log(p.toString());//[object Object]
+    // 如果把对象转换成字符串？
+    var jsonStr = JSON.stringify(p);//等到的是json格式的字符串
+    console.log(jsonStr);//{"age":3,"height":180} => json格式的字符串
+
+    var str = jsonStr
+    // console.log(str)
+    // JSON.parse把JSON格式的字符串转换为JSON对象
+    var str1 = JSON.parse(str)
+    console.log(typeof str1);//object
+
+    // 将值装入对象(装箱)
+    var b = new Object('hello');
+    b.age = 3
+    console.log(b);//String {"fff", age: 3}
+    // valueOf()从对象中取出值(开箱)
+    console.log(b.valueOf());//fff
+    console.log(b.toString());//fff
+
+
+    var c = {
+        a:'c',
+        b:'d'
+    }
+    // 放回给定对象自身可枚举属性[key,value]
+    console.log(Object.entries(c));//[['a','c'],['b','d']]
+
+
+    var m = Object.entries(c)
+    console.log(m)
+    console.log(m.length)//2
+
+    for(var i = 0;i < 2;i++){
+        var a = m[i]
+        console.log(a);//['a','c']   ['b','d']
+        // 访问属性名
+        console.log(a[0]);// a   b
+        // 访问属性值
+        console.log(a[1]);// c   d
+    }
+
+
+    
+</script>

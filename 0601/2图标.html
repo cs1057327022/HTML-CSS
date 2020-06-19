@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .search{
+            width: 24px;
+            height: 24px;
+            border: 2px solid #000000;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+        .search::after{
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 10px;
+            border: 1px solid #000000;
+            background-color: #000000;
+            position: absolute;
+            left: 25px;
+            top: 15px;
+            transform: rotate(-59deg);
+        }
+        .jia{
+            width: 10px;
+            height: 60px;
+            border: 2px solid #000000;
+            background-color: #000000;
+            position: relative;
+            left: 20px;
+        }
+        .jia::after{
+            content: '';
+            width: 10px;
+            height: 60px;
+            border: 1px solid #000000;
+            background-color: #000000;
+            transform: rotate(90deg);
+            position: absolute;
+            top: -4px;
+            left: 0px;
+        }
+        .sjx{
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-left-color: #000000;
+            position: relative;
+            left: 70px;
+        }
+        .sjx::before{
+            content: '';
+            width: 40px;
+            height: 10px;
+            background-color: #000000;
+            position: absolute;
+            left: -59px;
+            top: -5px;
+        }
+        .sjx1{
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-right-color: #000000;
+            position: relative;
+            left: 10px;
+        }
+        .sjx1::before{
+            content: '';
+            width: 40px;
+            height: 10px;
+            background-color: #000000;
+            position: absolute;
+            left: 20px;
+            top: -5px;
+        }
+        .sjx2{
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-bottom-color: #000000;
+            position: relative;
+        }
+        .sjx2::before{
+            content: '';
+            width: 40px;
+            height: 10px;
+            background-color: #000000;
+            position: absolute;
+            transform: rotate(90deg);
+            left: -20px;
+            top: 34px;
+        }
+        .sjx3{
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: #000000;
+            position: relative;
+            top: 95px;
+        }
+        .sjx3::before{
+            content: '';
+            width: 40px;
+            height: 10px;
+            background-color: #000000;
+            position: absolute;
+            transform: rotate(90deg);
+            left: -20px;
+            top: -45px;
+        }
+        .sjx4{
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-left-color: #000000;
+            position: relative;
+            left: 70px;
+            top: 70px;
+        }
+        .sjx4::before{
+            content: '';
+            width: 40px;
+            height: 15px;
+            background-color: #000000;
+            position: absolute;
+            left: -59px;
+            top: -5px;
+            border-top-left-radius: 100%;
+        }
+        .sjx4::after{
+            content: '';
+            width: 40px;
+            height: 10px;
+            background-color: #ffffff;
+            position: absolute;
+            left: -60px;
+            top: 3px;
+            border-top-left-radius: 100%;
+        }
+        .sjx5{
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-bottom-color: #000000;
+            position: relative;
+            top: 55px;
+        }
+        .sjx5::after{
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #000000;
+            position: absolute;
+            top: 20px;
+            left: -10px;
+        }
+        .sjx5::before{
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 30px;
+            left: -5px;
+            z-index: 1;
+        }
+        .sjx6{
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: #000;
+            position: relative;
+            top: 80px;
+        }
+        .sjx6::before{
+            content: '';
+            width: 10px;
+            height: 30px;
+            background-color: #000000;
+            position: absolute;
+            top: -6px;
+            left: -5px;
+        }
+        .sjx6::after{
+            content: '';
+            width: 30px;
+            height: 10px;
+            background-color: #000000;
+            position: absolute;
+            top: 24px;
+            left: -15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1:html 元素 有3个元素
+        div 为本元素 也是伪元素的父元素
+        给本元素相对定位：伪元素绝对定位：通过移动 移动实现效果
+    -->
+    <div class="search"></div>
+    <div class="jia"></div>
+    <!-- 3角形 -->
+    <div class="sjx"></div>
+    <div class="sjx1"></div>
+    <div class="sjx2"></div>
+    <div class="sjx3"></div>
+    <div class="sjx4"></div>
+    <div class="sjx5"></div>
+    <div class="sjx6"></div>
+</body>
+</html>
+<!-- 
+    动画
+    定义：执行
+    2d 3d 过渡
+-->

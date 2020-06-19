@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.big img{
+				width: 300px;
+				height: 300px;
+			}
+			.small img{
+				width: 50px;
+				height: 50px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<p class="big">
+				<img :src="imgs[currentImgIndex]" >
+			</p>
+			<p class="small">
+				<img v-for="(img,index) in imgs" :src="img" @click="changeIndex(index)">
+			</p>
+		</div>
+		<script src="js/vue.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					imgs: [
+						"https:\/\/pic4.zhimg.com\/v2-f00336849235dcedf3c8b457fdb761eb.jpg",
+						"https:\/\/pic2.zhimg.com\/v2-07d7046ef25a00142bf1151f02b0f295.jpg",
+						"https:\/\/pic3.zhimg.com\/v2-96d3d413cdff88bb81d18a9dea41bf36.jpg"
+					],
+					currentImgIndex:0
+				},
+				methods: {
+					changeIndex(index){
+						this.currentImgIndex = index;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

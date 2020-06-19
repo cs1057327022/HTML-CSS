@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 定义动画 动画名字ani */
+        @keyframes ani {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+        @keyframes bge {
+            0%{
+                background-color: khaki;
+            }
+            10%{
+                background-color: rgb(86, 197, 42);
+            }
+            20%{
+                background-color: aqua;
+            }
+            30%{
+                background-color: blue;
+            }
+            40%{
+                background-color: green;
+            }
+            70%{
+                background-color: rosybrown;
+            }
+            80%{
+                background-color: yellow;
+            }
+            100%{
+                background-color: rebeccapurple;
+            }
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* display: none; */
+            /* visibility: hidden; */
+            animation: bge 0.5s infinite ease-in;
+        }
+        .wrap{
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: rosybrown;
+            /* 使用 */
+            animation: ani 4s infinite ease-in;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        设置一个元素隐藏有几种
+        非动画：display:none  visiblity:hidden
+        问题：区别是什么? 占位置 不占位置
+
+        有动画的：
+        1.高度为0 overflow：hidden
+        2.3D 选择 90 度
+        3.缩放到0
+        4.透明度
+    -->
+    <!-- 
+        动画 1定义 2使用
+     -->
+    <div class="box"></div>
+    <div class="wrap"></div>
+</body>
+</html>

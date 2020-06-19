@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<p>
+				<span @click="currentIndex=0">首页</span>
+				<span @click="currentIndex=1">设置</span>
+				<span @click="currentIndex=2">分类</span>
+			</p>
+			<section>
+				<div v-show="currentIndex==0">首页内容</div>
+				<div v-show="currentIndex==1">设置内容</div>
+				<div v-show="currentIndex==2">分类内容</div>
+			</section>
+		</div>
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					currentIndex:0,
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>

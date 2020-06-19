@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+            padding: 20px;
+            margin: 10px;
+        }
+        nav{
+            height: 200px;
+            background-color: blueviolet;
+            /* 
+                需求式拉开子元素和父元素距离--->给父元素 padding
+                问题：margin和padding是怎么应用的？
+                1：dispaly：inline-block margin：0
+                拉开父子元素距离 padding 相邻兄弟元素用margin 注意外边距塌陷
+             */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav></nav>
+    </div>
+</body>
+</html>
+<!-- 
+    布局：
+    能上下绝不左右
+    能左右绝不‘品’字
+
+    盒子模型：
+    1：能装多少内容 content
+    2：自己占多大地 size
+
+    boder-box：
+    content = width-padding
+    size = width + padding + boder - width + margin
+    注意：默认Margin 外边距塌陷
+ -->

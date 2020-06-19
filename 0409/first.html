@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			ul li{
+				position: relative;
+			}
+			ul li img{
+				position: absolute;
+				right: 0;
+				top: 20px;
+				display: none;
+			}
+			.show{
+				display: block;
+			}
+			.hide{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<header>{{changeDateFormat()}}</header>
+			<ul>
+				<li v-for="(s,index) in news.stories" @mouseenter="showImg(index)" @mouseleave="hideImg()">
+					<p>{{s.title}}</p>
+					<img :src="s.images[0]" :class="currentIndex == index ? 'show' : 'hide' ">
+				</li>
+			</ul>
+		</div>
+		<script src="js/vue.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					currentIndex:-1,
+					news: {
+						"date": "20200408",
+						"stories": [{
+							"image_hue": "0xb3a27d",
+							"title": "「冠姓权」是怎么来的？",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722526",
+							"hint": "谢陆拾 · 2 分钟阅读",
+							"ga_prefix": "040807",
+							"images": ["https:\/\/pic4.zhimg.com\/v2-f00336849235dcedf3c8b457fdb761eb.jpg"],
+							"type": 0,
+							"id": 9722526
+						}, {
+							"image_hue": "0x412c26",
+							"title": "周星驰与吴孟达关系如何？",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722533",
+							"hint": "叉少 · 8 分钟阅读",
+							"ga_prefix": "040807",
+							"images": ["https:\/\/pic2.zhimg.com\/v2-07d7046ef25a00142bf1151f02b0f295.jpg"],
+							"type": 0,
+							"id": 9722533
+						}, {
+							"image_hue": "0x7d94b3",
+							"title": "如何正确地游览故宫？",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722535",
+							"hint": "刘元 · 6 分钟阅读",
+							"ga_prefix": "040807",
+							"images": ["https:\/\/pic3.zhimg.com\/v2-96d3d413cdff88bb81d18a9dea41bf36.jpg"],
+							"type": 0,
+							"id": 9722535
+						}, {
+							"image_hue": "0x6b7f99",
+							"title": "美国高校是怎么做科研的？",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722543",
+							"hint": "charles · 7 分钟阅读",
+							"ga_prefix": "040807",
+							"images": ["https:\/\/pic4.zhimg.com\/v2-75abae31d26f9fd56231a5e0eea909ef.jpg"],
+							"type": 0,
+							"id": 9722543
+						}, {
+							"image_hue": "0x827db3",
+							"title": "大误 · 《三体》才是真正的预言故事",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722524",
+							"hint": "老疯狗 · 13 分钟阅读",
+							"ga_prefix": "040807",
+							"images": ["https:\/\/pic4.zhimg.com\/v2-54786514053fc5102314bfd98b4f9dc7.jpg"],
+							"type": 0,
+							"id": 9722524
+						}, {
+							"image_hue": "0x1a2f37",
+							"title": "瞎扯 · 如何正确地吐槽",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722509",
+							"hint": "VOL.2369",
+							"ga_prefix": "040806",
+							"images": ["https:\/\/pic4.zhimg.com\/v2-a6d8af4a0a3b2332ebece37cc3359c8f.jpg"],
+							"type": 0,
+							"id": 9722509
+						}],
+						"top_stories": [{
+							"image_hue": "0xb38b7d",
+							"hint": "作者 \/ chenqin",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722465",
+							"image": "https:\/\/pic3.zhimg.com\/v2-51e9d5e2a871a768a1f28eb4b15e915a.jpg",
+							"title": "美国现在的疫情发展到什么程度了？",
+							"ga_prefix": "040611",
+							"type": 0,
+							"id": 9722465
+						}, {
+							"image_hue": "0x7b96b3",
+							"hint": "作者 \/ 苏澄宇",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722376",
+							"image": "https:\/\/pic2.zhimg.com\/v2-cb7c8e59d3027d5961e98e593e672441.jpg",
+							"title": "科学家在南海首次发现鲸落，鲸落是什么？",
+							"ga_prefix": "040407",
+							"type": 0,
+							"id": 9722376
+						}, {
+							"image_hue": "0xa37972",
+							"hint": "作者 \/ 星球研究所",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722200",
+							"image": "https:\/\/pic4.zhimg.com\/v2-e6d9d5785b99645cdb0e1f0aca0bea5f.jpg",
+							"title": "中国最美的春天在哪里？",
+							"ga_prefix": "033009",
+							"type": 0,
+							"id": 9722200
+						}, {
+							"image_hue": "0x1e7cb3",
+							"hint": "作者 \/ 苏澄宇",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722142",
+							"image": "https:\/\/pic3.zhimg.com\/v2-646c03d38132c3d3e6f92162a78baad6.jpg",
+							"title": "鱼会不会尿尿呢？",
+							"ga_prefix": "032920",
+							"type": 0,
+							"id": 9722142
+						}, {
+							"image_hue": "0xb38e7d",
+							"hint": "作者 \/ 二手的科学家",
+							"url": "https:\/\/daily.zhihu.com\/story\/9722015",
+							"image": "https:\/\/pic1.zhimg.com\/v2-7e0d28191f175995c1b2eb1ad3c80ab4.jpg",
+							"title": "研制疫苗时，跳过动物试验直接进行人体试验有什么危险？",
+							"ga_prefix": "032516",
+							"type": 0,
+							"id": 9722015
+						}]
+					}
+				},
+				methods: {
+					changeDateFormat(){
+						var year = this.news.date.slice(0,4) * 1;
+						var month = this.news.date.slice(4,6) * 1;
+						var day = this.news.date.slice(6,8) * 1;
+						console.log(year,month,day);
+						var date = new Date(year,month - 1,day);
+						console.log(date);
+						var week = date.getDay();
+						console.log(week);
+						var weeks = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+						var weekEn = weeks[week];
+						
+						var resultStr = year + '.' +(month < 10 ? '0'+month : month) + '.' + (day < 10 ? '0' + day : day) + '.'  + weekEn;
+						console.log(resultStr);
+						return resultStr;
+					},
+					showImg(index){
+						this.currentIndex = index;
+					},
+					hideImg(){
+						this.currentIndex = -1;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

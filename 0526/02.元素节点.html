@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>元素节点</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul,ol{
+        list-style: none;
+    }
+</style>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP<span>nodejs</span></li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul')
+        // dir在控制台上显示一个对象的属性和方法
+        console.dir(ul)
+        // log在控制台上打印出日志
+        console.log(ul)
+
+        var li = ul.childNodes[7]//获取子节点
+        // childNodes :获取子节点(包含文本节点)  会受到html中空白字符(回车符)的影响
+        console.log(li)
+
+        // nodeName 获取节点的名字
+        // nextSibling 返回紧跟其后的节点
+        console.log(li.nextSibling.nodeName)
+        // 返回临近的节点，不管这个节点是声明声明类型
+        // previousSibling：返回同一树层级中指定节点的前一个节点
+        console.log(li.previousSibling.nodeName)
+
+        console.dir(document)
+        // createElement:创建一个元素节点
+        var li1 = document.createElement('li')
+        
+        // 设置内容方式1
+        // li1.innerText = '你们好'
+        // li1.textContent ='nimenhao'
+        // li1.innerHTML = '<h1>你们好</h1>'
+
+        // 设置内容方式2
+        // createTextNode创建文本节点
+        var li2 = document.createTextNode('dajiahao')
+        li1.appendChild(li2)
+        // appendChild：把子元素拼接到父元素上
+        ul.appendChild(li1)
+        
+
+        // 设置属性的方式1
+        li1.id = 'aa'
+        li1.className = 'ccc'
+
+        // 设置属性的方式2
+        //  setAttribute(属性名，属性值)
+        li1.setAttribute('class','cccddd')//覆盖了上面的
+
+        // 设置属性的方式3
+        // 第一步：创建属性节点
+        var id = document.createAttribute('id')
+        // 第二步：设置值
+        id.value = 'set'
+        // 第三步：绑定
+        li1.setAttributeNode(id)//覆盖了上面的
+
+        // 移除子节点
+        // removeChild移除子节点  ，firstElementChild：ul里面的第一个子节点
+        var removed = ul.removeChild(ul.firstElementChild)
+        console.log(removed)
+        
+        // 将元素添加到最后一个节点之后
+        // ul.appendChild(removed)
+        
+        // replaceChild：替换子节点
+        // 前面的替换后面的
+        // ul.replaceChild(removed,li1)
+
+        // 在...之前插入
+        ul.insertBefore(removed,ul.lastChild)
+                      //(要插入的文本,在...之前)
+
+        
+        ul.insertAdjacentText('beforeBegin','外面的前面')//插入文本
+        ul.insertAdjacentHTML('afterBegin','<li>里面的前面</li>')
+        ul.insertAdjacentHTML('beforeEnd','<li>里面的后面</li>')
+        ul.insertAdjacentText('afterEnd','外面的后面')
+       
+        // beforeBegin 在该元素的前面插入
+        // afterBegin  在该元素的第一个子元素前面插入
+        // beforeEnd   在该元素的最后一个子元素前面插入
+        // afterEnd    在该元素的后面插入
+        
+
+        var div = document.createElement('div')
+        // 插入标签元素
+        ul.insertAdjacentElement('beforeBegin',div)
+    </script>
+</body>
+</html>

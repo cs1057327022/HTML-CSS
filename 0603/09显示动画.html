@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 高度 0 overflow：hidden 实现显示动画 */
+        @keyframes dh {
+            from{
+                height: 0px;
+            }
+            to{
+                height: 30px;
+            }
+        }
+        body{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        nav{
+            width: 100%;
+            background-color: #999999;
+        }
+        ul{
+            display: flex;
+            height: 30px;
+            justify-content: space-around;
+            animation: dh 3s linear;
+            overflow: hidden;
+            align-items: center;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 
+            透明度 0-1
+            1 为显示 0为隐藏 可以继承
+            注意：写蒙版不会使用透明度：用渐变
+            用途：动画上
+             */
+            opacity: 1;
+            transition: all 0.5s;
+        }
+        .box:hover{
+            opacity: 0;
+            /* all 可以查看所有属性的变化过程 */
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        动画：
+        1.分析动画初始化是什么样子
+        2.结束时候什么样
+        3.最后分析 过程是什么
+
+        过渡：可以看到一个属性值变化的【过程】
+        transition:属性 过渡事件
+     -->
+    <nav>
+        <ul>
+            <li><a href="#">AA1</a></li>
+            <li><a href="#">AA2</a></li>
+            <li><a href="#">AA3</a></li>
+            <li><a href="#">AA4</a></li>
+            <li><a href="#">AA5</a></li>
+            <li><a href="#">AA6</a></li>
+            <li><a href="#">AA7</a></li>
+            <li><a href="#">AA8</a></li>
+            <li><a href="#">AA9</a></li>
+        </ul>
+    </nav>
+    <div class="box"></div>
+</body>
+</html>
+<script>
+</script>
